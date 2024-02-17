@@ -1,0 +1,245 @@
+:root{
+    --gradient: linear-gradient(
+        to bottom right,
+        #cccccc,
+        #ffffff,
+        #cccccc
+    )
+} /* variante criada para degrade nas letras */
+
+.cabecalho{
+    background-image: linear-gradient(
+        to right, #993399, #b34db2, #993399
+    ); /* degrade de cores */
+    display: flex; /* alterar a direção do conteúdo */
+    justify-content: center; /* justificar o conteúdo no centro */
+    align-items: center; /* centralizar o conteúdo */
+    position: relative; /* posição relativa */
+    justify-content: space-around; /* deixar o espaçamento simétrico */
+    align-items: center; /* centralizar o conteúdo */
+    padding: 26px 0; /* espaçamento */
+}
+
+.cabecalho-imagem{
+    background-image: var(--gradient); /* variante criada no root para criar o degrade */
+
+    background-clip: text; /* definir cor ou imagem extendida */
+    -webkit-background-clip: text; /* definir cor ou imagem extendida */
+    color: transparent; /* deixar a coloração transparente */
+    font-family: "Anton", sans-serif; /* codigo da font */
+}
+
+.btn-link{
+    text-decoration: none; /* nenhuma decoração */
+    text-align: center; /* centralizar o texto */
+    padding: 0; /* espaçamento */
+    margin: 0; /* margem */
+    font-family: "Protest Strike", sans-serif; /* codigo da fonte */
+    color: #000000; /* cor da letra */
+    font-size: 120%; /* tamanho da font */
+}
+
+.cabecalho-lista{
+    display: flex; /* altera a direção do conteúdo */
+    flex-direction: row; /* deixar em fileiras direcionadas */
+    flex-wrap: nowrap; /* remover quebra de linha de texto */
+    justify-content: space-evenly; /* deixar o espaçamento simétrico */
+}
+
+.cabecalho-lista-item{
+    align-items: center; /* centralizar */
+    background-image: linear-gradient(
+        to top right, black, grey, white
+    ); /* degrade de cores */
+    justify-content: center; /* centralizar o conteúdo */
+    margin: 0px 10px; /* margem */
+    padding: 16px 20px; /* espaçamento */
+    border-radius: 30px; /* arredondamento na borda */
+    font-family: "Protest Strike", sans-serif; /* codigo da fonte */
+    color: #000000; /* cor da letra */
+}
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    top: 8%;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 70%;
+    border-radius: 30px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -178px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20.4%;
+}
+
+.manual-btn{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: blue;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.navigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: -78px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: blue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: blue;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: blue;
+}
+
+.reset-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.reset-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: -78px;
+    display: flex;
+    justify-content: center;
+}
+
+.reset-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .reset-auto .reset-btn1{
+    background: blue;
+}
+
+#radio2:checked ~ .reset-auto .reset-btn2{
+    background: blue;
+}
+
+#radio3:checked ~ .reset-auto .reset-btn3{
+    background: blue;
+}
+
+@media screen and (max-width: 900px) {
+    .html {
+        display: none
+    }
+}
+
+.logo {
+    position: absolute;
+    width: 65px;
+    margin-top: -470px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 2%;
+}
+
+
+#barra-pesquisa {
+    position: absolute;
+    width: 430px;
+    margin-top: -45px;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    left: 8%;
+  }
+  
+  #resultados {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #resultados li {
+    padding: 0;
+  }
+
+  .lupa {
+    position: absolute;
+    width: 45px;
+    margin-top: -43px;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    left: 36.5%;
+  }

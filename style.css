@@ -40,23 +40,29 @@
 }
 
 .cabecalho-lista{
-    display: flex; /* altera a direção do conteúdo */
+    display: flex;
     flex-direction: row; /* deixar em fileiras direcionadas */
     flex-wrap: nowrap; /* remover quebra de linha de texto */
     justify-content: space-evenly; /* deixar o espaçamento simétrico */
+    background-image: linear-gradient(
+        to top right, black, grey, white
+    ); /* degrade de cores */
 }
 
 .cabecalho-lista-item{
     align-items: center; /* centralizar */
-    background-image: linear-gradient(
-        to top right, black, grey, white
-    ); /* degrade de cores */
     justify-content: center; /* centralizar o conteúdo */
     margin: 0px 10px; /* margem */
-    padding: 16px 20px; /* espaçamento */
-    border-radius: 30px; /* arredondamento na borda */
     font-family: "Protest Strike", sans-serif; /* codigo da fonte */
     color: #000000; /* cor da letra */
+}
+
+.btn-link:hover{
+    color: #00ced1;
+}
+
+.cabecalho-lista-item:hover{
+    color: #00ced1;
 }
 
 .slider{
@@ -97,7 +103,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: 20.4%;
+    left: 20.7%;
 }
 
 .manual-btn{
@@ -201,7 +207,7 @@
 .logo {
     position: absolute;
     width: 65px;
-    margin-top: -470px;
+    margin-top: -438px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -212,7 +218,7 @@
 #barra-pesquisa {
     position: absolute;
     width: 430px;
-    margin-top: -45px;
+    margin-top: -47px;
     padding: 10px;
     font-size: 16px;
     display: flex;
